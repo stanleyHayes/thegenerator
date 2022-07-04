@@ -36,7 +36,7 @@ function App() {
                 setSubmitting(true);
                 const response = await axios({
                     method: 'POST',
-                    url: `http://localhost:8008/api/v1/admin/phone-numbers`,
+                    url: `https://thegenerator-api.herokuapp.com/api/v1/admin/phone-numbers`,
                     data: values,
                     responseType: 'blob'
                 });
