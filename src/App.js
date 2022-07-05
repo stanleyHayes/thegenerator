@@ -37,7 +37,8 @@ function App() {
                 const response = await axios({
                     method: 'POST',
                     url: `https://thegenerator-api.herokuapp.com/api/v1/admin/phone-numbers`,
-                    data: values,
+                    // url: `http://localhost:8008/api/v1/admin/phone-numbers`,
+                    data: {...values, countryCode: values.countryCode.toUpperCase()},
                     responseType: 'blob'
                 });
 
